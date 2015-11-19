@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Linkedin Share test</title>
+</head>
+
+<div class="social_button twitter_button">
+    <div id="foo">
+        <a href="https://google.com" class="twitter-share-button" data-count="horizontal">
+            Tweet
+        </a>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<script type="text/javascript" charset="utf-8">
+    window.twttr = (function (d, s, id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = {
+            _e: [],
+            ready: function (f) {
+                t._e.push(f)
+            }
+        });
+    }(document, "script", "twitter-wjs"));
+    twttr.events.bind('click', function (event) {
+        alert('clicked');
+    });
+</script>
+
+
+</html>

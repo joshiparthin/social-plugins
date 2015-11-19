@@ -1,0 +1,31 @@
+
+<html>
+<head>
+
+<script type="text/javascript">
+function onStartInteraction(jsonArgs){
+  console.log('Interaction started');
+}
+
+function onEndIteraction(jsonArgs) {
+  console.log('Interaction ends');
+  console.log(jsonArgs);
+
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- Way 1: By using the G Plus sharing balloon. -->
+  <div class="g-plus" data-action="share" data-href="www.trendvia.com" data-onstartinteraction="onStartInteraction" data-onendinteraction="onEndIteraction"></div>
+
+<!-- Way 2: By Using popup by triggering a link -->
+  <a href="https://plus.google.com/share?url=www.trendvia.com" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+  src="https://www.gstatic.com/images/icons/gplus-64.png" alt="Share on Google+"/></a>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>
